@@ -60,31 +60,103 @@
         <form action=" ">
 
 
-
+            <!-- INPUT -->
             <div class="row">
+                <!-- NOME -->
                 <div class="col-6 mt-2">
-                     <Label class="form-label" for ="Nome-Autore"><h2 class="fs-6">Nome Autore</h2></Label> 
-                     <Input class="form-control" type="text" id="Nome-Autore" required></Input>
-                    </div>
-                  <div class="col-6 mt-2">
-                     <Label class="form-label" for ="Cognome-Autore"><h2 class="fs-6">Cognome Autore</h2></Label> 
-                     <Input class="form-control" type="text" id="Nome-Autore" required></Input>
-                    </div>
+                    <Label class="form-label" for="Nome-Autore">
+                        <h2 class="fs-6">Nome Autore</h2>
+                    </Label>
+                    <Input class="form-control" type="text" id="Nome-Autore"
+                        placeholder="Inserisci il nome dell'autore"></Input>
+                </div>
+                <!-- COGNOME  -->
+                <div class="col-6 mt-2">
+                    <Label class="form-label" for="Cognome-Autore">
+                        <h2 class="fs-6">Cognome Autore</h2>
+                    </Label>
+                    <Input class="form-control" type="text" id="Cognome-Autore"
+                        placeholder="Inserisci il Cognome dell'autore"></Input>
+                </div>
+                <!-- TITOLO -->
                 <div class="col-12 mt-4">
-                     <Label class="form-label" for ="Titolo"><h2 class="fs-6">Titolo</h2></Label> 
-                     <Input class="form-control" type="text" id="Titolo" required></Input>
-                     <Label class="form-label" for ="Titolo"><p class="fs-6 text-body-tertiary">Titolo versione Italiana</p></Label> 
+                    <Label class="form-label" for="Titolo">
+                        <h2 class="fs-6">Titolo</h2>
+                    </Label>
+                    <Input class="form-control" type="text" id="Titolo"
+                        placeholder="Inserisci il titolo del libro"></Input>
+                    <Label class="form-label" for="Titolo">
+                        <p class="fs-6 text-body-tertiary">Titolo versione Italiana</p>
+                    </Label>
+                </div>
+                <!-- SELECT GENERE-->
+                <div class="col-12 col-lg-4 mt-4">
+                    <Label class="form-label" for="Genere">
+                        <h2 class="fs-6">Genere</h2>
+                    </Label>
 
-                    </div>
-                <div class="col-12">Genere</div>
-                <div class="col-12">Anno di Pubblicazione</div>
-                <div class="col-12">ISBN#</div>
+                    <select class="form-select" id="Genere" aria-label="Default select example">
+                        <option selected>Scegli il genere</option>
+                        <option value="1">Storia</option>
+                        <option value="2">Narrativa</option>
+                        <option value="3">Filosofia</option>
+                        <option value="3">Arte</option>
+                        <option value="3">Autobiografia</option>
+                        <option value="3">Scienze</option>
+                    </select>
+                </div>
+                <!-- DATA PUBBLICAZIONE  -->
+                <div class="col-12 col-lg-4 mt-4">
+                    <Label class="form-label" for="data-pubblicazione">
+                        <h2 class="fs-6">Data Pubblicazione</h2>
+                    </Label>
+                    <input class="form-control" id="data-pubblicazione" type="number"
+                        placeholder="Inserisci data di pubblicazione" />
+                </div>
+
+
+
+                <!-- ISBN# -->
+                <div class="col-12 col-lg-4 mt-4">
+
+                    <Label class="form-label" for="ISBN">
+                        <h2 class="fs-6">ISBN#</h2>
+                    </Label>
+                    <input class="form-control" type="number" id="ISBN" min="13"
+                        placeholder="Inserisci datil codice ISBN#" />
+                </div>
             </div>
-            <hr>
+
+
+            <!--HR -->
+            <hr class="mt-4">
+
+
+            <!-- NOTE -->
             <div class="row">
-                <div class="col-12">Note</div>
-                <div class="col-12">Disponibile anche in digitale</div>
                 <div class="col-12">
+                    <Label class="form-label" for="floatingTextarea">
+                        <h2 class="fs-6">Note</h2>
+                    </Label>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Inserisci eventuali note sul libro</label>
+                    </div>
+
+                </div>
+
+                <!-- DISPONIBILE IN DIGITALE - CHECK RADIUS -->
+                <div class="col-12 mt-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                             <h2 class="fs-6">Disponibile anche in digitale</h2>
+                        </label>
+                    </div>                  
+                </div>
+
+                <div class="col-12 mt-4">
                     <button type="button" class="btn btn-primary btn-sm">Aggiungi Libro</button>
                 </div>
 
